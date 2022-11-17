@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Factura</title>
+</head>
+<body>
+    <div class="container">
+        <header class="d-flex justify-content-between align-items-center">
+            <h1>Bienvenid@ {{user.first_name}}</h1>
+            <a href="/pedidos" class="btn btn-primary">Regresar</a>
+            <a href="/logout" class="btn btn-danger">Cerrar Sesión</a>
+        </header>
+        <hr>
+        {% with messages = get_flashed_messages(category_filter=['producto']) %}
+            {% if messages %}
+                <div class="alert alert-danger">
+                    {% for message in messages %}
+                        <p>{{message}}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+
+    {% for pedido in pedidos %}
+        <form action="/proceso" method="post"></form>
+        <h1>Factura de su pedido</h1>
+        
+        <div class="form-group">
+            <label for="nombre">Nombre {{pedido.nombre}}</label>
+            <input type="text" id="nombre" name="nombre">
+        </div>
+        <div class="form-group">
+            <label for="email">fecha {{pedido.fecha}}</label>
+            <input type="text" id="email" name="email">
+        </div>
+        <div class="form-group">
+            <label for="direccion">Direccion {{pedido.direccion}}</label>
+            <input type="text" id="direccion" name="direccion">
+        </div>
+        
+        <div class="row">
+            
+            {% for idx in range(productos|length) %}
+                <h5 class="card-title">{{productos[idx]nombre}}</h5>
+                <p class="card-text">{{productos[idx].descripcion}}</p>
+                <p class="card-text">{{productos[idx].precio}}</p>
+                <p class="card-text">{{productos[idx].cantidad}}</p>
+                <p class="card-text">{{productos[idx].total}}</p>
+
+            {% endfor %}
+
+    {% endfor %}
+    </div>
+</body>
+</html>
+

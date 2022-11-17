@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row-6">
+            <div class="col-2">
+                
+                <h2>Regístrate</h2>
+
+                {% with messages = get_flashed_messages(category_filter=['registro']) %}
+                    {% if messages %}
+                        <div class="alert alert-danger">
+                            {% for message in messages %}
+                                <p>{{message}}</p>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                {% endwith %}
+
+                <form action="/registrate" method="post"> 
+                    <div class="form-group">
+                        <label for="first_name">Nombre</label>
+                        <input type="text" id="first_name" name="first_name" class="cuadro">
+                    </div>
+                    <div class="form-group">
+                        <label for="last_name">Apellido</label>
+                        <input type="text" id="last_name" name="last_name" class="cuadro">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="text" id="email" name="email" class="cuadro">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" class="cuadro">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm_password">Confirma Password</label>
+                        <input type="password" id="confirm_password" name="confirm_password" class="cuadro">
+                    </div>
+                    <hr>
+                    <input type="submit" value="Registrarme" class="btn btn-success">
+                </form>
+            </div>
+</body>
+</html>

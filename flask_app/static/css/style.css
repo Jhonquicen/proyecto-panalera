@@ -1,0 +1,189 @@
+body{
+    background-image: url("../img/products/IMG-20220824-WA0016.jpg") !important;
+    background-repeat: no-repeat !important;
+    background-size: cover!important;
+
+    
+}
+
+.container{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.row-7{
+    border: 1px solid black;
+}
+.row-6{
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: space-around;
+}
+.row{
+    
+    margin: 80px 0px 50px 0px;
+    width: 1040px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+
+}
+.row-1{
+    margin: 15px 0px 0px 80px;
+    
+    height: 70px;
+    background-color: rgb(183, 125, 224);
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.main-1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+
+    
+    
+}
+.accesorio{
+    margin: 10px;
+    width: 300px;
+    height: 300px;
+    display: flex;
+}
+.col-2{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    
+}
+.cuadro{
+    border-radius: 5px;
+    height: 40px;
+    width: 200px;
+    
+}
+.ropa{
+    margin: 10px;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    
+}
+.col-1{
+    margin: 10px 0px 0px 90px;
+    
+    align-items: center;
+    
+}
+.col-3{
+    margin: 0px;
+    width: 500%;
+    
+    display: flex;
+    flex-direction: column;
+}
+.col-8{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    margin: 10px 0px 0px 130px;
+
+}
+.row-5{
+    margin: 15px 0px 0px 80px;
+    width: 1100px;
+    height: 70px;
+    background-color: rgb(183, 125, 224);
+    
+}
+
+.row-3{
+    margin: 0px;
+    width: 450%;
+    height: 570px;
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+.row3-3{
+    display: flex;
+    flex-direction: column;
+}
+
+.main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    
+}
+
+.organizar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.precio{
+    width: 30px;
+    
+}
+
+.botones{
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.imagen{
+    
+    width: 200px;
+    height: 200px;
+    
+}
+.imagen1{
+    width: 60px;
+    height: 50px;
+}
+.row-2{
+    margin: 10px;
+    background-color: blue;
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: space-around;
+    
+}
+
+.row-3{
+    display: flex;
+    background-color: blueviolet;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.col-5{
+    background-color: aqua;
+    display: flex;
+    
+}
+
+.mani-3{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
